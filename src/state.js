@@ -4,28 +4,47 @@
 
 // Actions
 const UPDATE_FILTER = 'multiselect/UPDATE_FILTER'
-const SHOW_VALUES = 'multiselect/SHOW_VALUES'
-const HIDE_VALUES = 'multiselect/HIDE_VALUES'
+const ADD_VALUE = 'multiselect/ADD_VALUE'
+const REMOVE_VALUE = 'multiselect/REMOVE_VALUE'
 
 const initialState = {
   filter: '',
   values: ['Han', 'Luke', 'Lea', 'Chewbacca'],
   filteredValues: [],
-  showValues: false
+  selectedValues: []
+}
+
+// Reducer - helpers
+const addSelected = (selectedValues, newValue) => {
+  if (selectedValues.includes(newValue)) {
+    return selectedValues
+  }
+  return [...selectedValues, newValue]
+}
+
+const removeSelected = (selectedValues, valueToRemove) => {
+  return [
+    ...selectedValues
+  ].filter(v => v !== valueToRemove)
 }
 
 // Reducer
 export default function reducer (state = initialState, action = {}) {
   switch (action.type) {
-    case SHOW_VALUES:
+    case ADD_VALUE:
       return {
         ...state,
-        showValues: true
+        selectedValues: addSelected(
+          state.selectedValues, action.value
+        )
       }
-    case HIDE_VALUES:
+    case REMOVE_VALUE:
       return {
         ...state,
-        showValues: false
+        selectedValues: removeSelected(
+          state.selectedValues,
+          action.value
+        )
       }
     case UPDATE_FILTER:
       return {
@@ -47,10 +66,12 @@ export const updateFilter = (value) => ({
   value
 })
 
-export const showValues = () => ({
-  type: SHOW_VALUES
+export const addValue = (value) => ({
+  type: ADD_VALUE,
+  value
 })
 
-export const hideValues = () => ({
-  type: HIDE_VALUES
+export const removeValue = (value) => ({
+  type: REMOVE_VALUE,
+  value
 })

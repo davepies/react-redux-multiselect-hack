@@ -1,5 +1,5 @@
 import React from 'react'
-import MultiSelect from './containers/MultiSelect'
+import MultiSelectContainer from './containers/MultiSelectContainer'
 import { Provider } from 'react-redux'
 
 import { createStore } from 'redux'
@@ -9,7 +9,7 @@ const store = createStore(MultiSelectReducer);
 
 const Root = (props) => (
   <Provider store={store}>
-    <MultiSelect />
+    <MultiSelectContainer />
   </Provider>
 )
 
