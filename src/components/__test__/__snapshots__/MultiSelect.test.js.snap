@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Multiselect simple render 1`] = `
+<div
+  data-radium="true"
+  style="display:inline-block"
+>
+  <input
+    type="text"
+  />
+  <div
+    data-radium="true"
+    style="position:relative"
+  >
+    <ul
+      data-radium="true"
+      style="display:none;list-style:none;color:white"
+    >
+      <li
+        data-radium="true"
+      >
+        <span
+          data-radium="true"
+          style="background:black;display:inline-block;cursor:pointer"
+        >
+          a
+        </span>
+      </li>
+      <li
+        data-radium="true"
+      >
+        <span
+          data-radium="true"
+          style="background:black;display:inline-block;cursor:pointer"
+        >
+          b
+        </span>
+      </li>
+      <li
+        data-radium="true"
+      >
+        <span
+          data-radium="true"
+          style="background:black;display:inline-block;cursor:pointer"
+        >
+          c
+        </span>
+      </li>
+    </ul>
+    <span
+      data-radium="true"
+      style="content:;display:block;position:absolute;left:0;top:0;width:100%;height:100%;opacity:0.6;background-image:url(http://digitalspyuk.cdnds.net/15/50/1600x800/landscape-1449498579-darth-vader-star-wars.jpg);background-size:cover;background-position:center;background-repeat:no-repeat;z-index:-1"
+    />
+  </div>
+</div>
+`;

@@ -3,7 +3,6 @@ import Radium from 'radium'
 import onClickOutside from 'react-onclickoutside'
 
 class MultiSelect extends Component {
-
   state = {
     shouldShowValues: false
   }
