@@ -31,12 +31,16 @@ class MultiSelect extends Component {
     return (
       <div style={styles.wrapper}>
         <input
+          className="filterValue"
           type='text'
           onFocus={() => this.handleFocus()}
           onChange={(e) => onFilterChange(e.target.value)}
         />
         <div style={styles.values}>
-          <ul style={[styles.list, styles[shouldShowValues ? 'listVisible' : null]]}>
+          <ul
+            className="selectableItems"
+            style={[styles.list, styles[shouldShowValues ? 'listVisible' : null]]}
+          >
             {values.map(
               (value, i) => (
                 <li key={i}>
@@ -53,7 +57,7 @@ class MultiSelect extends Component {
           <span style={styles.darth} />
         </div>
         {!!selectedValues.length &&
-          <div>
+          <div className="selectedItems">
             <span>You have selected:</span>
             {
               selectedValues.map(

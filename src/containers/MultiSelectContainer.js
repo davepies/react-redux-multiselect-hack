@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import { updateFilter, addValue, removeValue } from '../state'
 
-const MultiSelectContainer = (props) => {
+export const MultiSelectContainer = (props) => {
   return (
     <MultiSelect {...props} />
   )

@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Multiselect simple render 1`] = `
+exports[`Multiselect renders 1`] = `
 <div
   data-radium="true"
   style="display:inline-block"
 >
   <input
+    class="filterValue"
     type="text"
   />
   <div
@@ -13,6 +14,7 @@ exports[`Multiselect simple render 1`] = `
     style="position:relative"
   >
     <ul
+      class="selectableItems"
       data-radium="true"
       style="display:none;list-style:none;color:white"
     >
